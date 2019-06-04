@@ -1,0 +1,103 @@
+
+body {
+  background: black;
+  background-size: cover;
+}
+
+.hide {
+  position: fixed;
+  left: 2000px;
+}
+
+#line1 {
+  color: white;
+  font-size: 175px;
+  font-family: Helvetica;
+  margin-top: 100px;
+  text-shadow: 5px 5px red;
+}
+
+#line2 {
+  color: white;
+  font-size: 175px;
+  font-family: Helvetica;
+  margin-top: -100px;
+  margin-bottom: 100px;
+  text-shadow: 5px 5px red;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 1200px;
+}
+
+
+.flash {
+    box-shadow: 10px 10px white;
+}
+
+#centerBox {
+  border: 5px solid red;
+  justify-content: center;
+  /*background-color: black;*/
+  width: 700px;
+  height: 700px;
+  text-align: center;
+  display: block;
+  cursor: help;
+}
+
+
+
+
+.sidebar {
+  color: white;
+  font-family: wingdings;
+  font-size: 175px;
+  width: 200px;
+  word-wrap: break-word;
+  margin-right: auto;
+  margin-left: auto;
+  text-shadow: 5px 5px red;
+
+}
+
+#right {
+  margin-left: 50px;
+}
+
+#left {
+  margin-right: auto;
+}
+
+#buttonbox {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 175px;
+  text-shadow: 5px 5px red;
+  align-content: center;
+  height: 200px;
+  padding-left: 50px;
+
+}
+
+#musicbutton {
+  cursor: pointer;
+}
+
+#musicplayer {
+  width: 700px;
+  height: 700px;
+  border: none;
+}
+
+
+
+
+/*media queries*/

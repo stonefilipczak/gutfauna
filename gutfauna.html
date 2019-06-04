@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gut Fauna</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="Tone.js"></script>
+  </head>
+
+<body>
+
+<div class="container">
+  <div id="left" class="sidebar">GUT</div>
+    <div id="centerBox" class="flash" onmousemove="populate(event)" onmouseout="reset()">
+      <iframe id="musicplayer" class="hide" src="https://bandcamp.com/EmbeddedPlayer/album=3717196198/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/" seamless><a href="http://gutfauna.bandcamp.com/album/magicicada">Magicicada by Gut Fauna</a></iframe>
+      <p id="line1" class="words">GUT</p>
+      <p id="line2" class="words">FAUNA</p>
+    </div>
+  <div id="right" class="sidebar">FUN</div>
+</div>
+
+<div id="buttonbox">
+  <span id="bottomleft">&#9758;</span>
+  <span id="musicbutton">&#9836;</span>
+  <span id="bottomright">&#9756;</span>
+</div>
+
+<script src="app.js"></script>
+
+</body>
