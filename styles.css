@@ -2,6 +2,7 @@
 body {
   background: black;
   background-size: cover;
+  font-size: 175px;
 }
 
 .hide {
@@ -11,7 +12,6 @@ body {
 
 #line1 {
   color: white;
-  font-size: 175px;
   font-family: Helvetica;
   margin-top: 100px;
   text-shadow: 5px 5px red;
@@ -19,7 +19,6 @@ body {
 
 #line2 {
   color: white;
-  font-size: 175px;
   font-family: Helvetica;
   margin-top: -100px;
   margin-bottom: 100px;
@@ -33,6 +32,7 @@ body {
   flex-wrap: wrap;
   align-content: center;
   width: 1200px;
+  margin-top: 20px;
 }
 
 
@@ -57,7 +57,6 @@ body {
 .sidebar {
   color: white;
   font-family: wingdings;
-  font-size: 175px;
   width: 200px;
   word-wrap: break-word;
   margin-right: auto;
@@ -79,7 +78,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: white;
-  font-size: 175px;
   text-shadow: 5px 5px red;
   align-content: center;
   height: 200px;
@@ -101,3 +99,168 @@ body {
 
 
 /*media queries*/
+
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 150px;
+  }
+  #centerBox {
+    height: 600px;
+    width: 600px;
+  }
+  .sidebar {
+    width: 170px;
+  }
+  #left {
+    margin-right: 5px;
+    margin-left: none;
+  }
+  #buttonbox {
+    width: 600px;
+  }
+  .container {
+    width: 1024px;
+    margin-top: 40px;
+  }
+  #musicplayer {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 115px;
+  }
+  #centerBox {
+    height: 450px;
+    width: 450px;
+  }
+  .sidebar {
+    width: 110px;
+  }
+  #left {
+    margin-right: 40px;
+    margin-left: none;
+  }
+  #buttonbox {
+    width: 500px;
+    margin-top: 20px;
+  }
+  .container {
+    width: 800px;
+    margin-top: 100px;
+  }
+  #musicplayer {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 100px;
+  }
+  #centerBox {
+    height: 400px;
+    width: 400px;
+  }
+  .sidebar {
+    width: 100px;
+  }
+  #left {
+    margin-right: 30px;
+    margin-left: none;
+  }
+  #buttonbox {
+    margin-top: 30px;
+    width: 400px;
+  }
+  .container {
+    width: 700px;
+    margin-top: 130px;
+  }
+  #musicplayer {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 75px;
+  }
+  #centerBox {
+    height: 300px;
+    width: 300px;
+  }
+  .sidebar {
+    width: 75px;
+  }
+  #left {
+    margin-right: 30px;
+    margin-left: none;
+  }
+  #buttonbox {
+    margin-top: 30px;
+    width: 400px;
+    padding-left: 130px;
+  }
+  .container {
+    width: 550px;
+    margin-top: 80px;
+  }
+  #musicplayer {
+    width: 300px;
+    height: 300px;
+  }
+
+  #line1 {
+    margin-top: 50px;
+  }
+  #line2{
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 50px;
+  }
+  #centerBox {
+    height: 200px;
+    width: 200px;
+  }
+  .sidebar {
+    width: 30px;
+  }
+  #left {
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+  #right {
+    margin-left: 20px;
+  }
+
+  #buttonbox {
+    margin-top: 20px;
+    width: 200px;
+    padding-left: 15px;
+  }
+  .container {
+    width: 360px;
+    margin-top: 80px;
+  }
+  #musicplayer {
+    width: 200px;
+    height: 200px;
+  }
+
+  #line1 {
+    margin-top: 50px;
+  }
+  #line2{
+    margin-top: -50px;
+  }
+}

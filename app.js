@@ -4,6 +4,8 @@ var line2 = document.getElementById('line2');
 var rightSide = document.getElementById('right');
 var leftSide = document.getElementById('left');
 var musicOpen = false;
+var delay = new Tone.PingPongDelay().toMaster();
+const theramin = new Tone.MonoSynth().connect(delay);
 
 var topWords = ['ACID', "OFFICE", "DISCO", "420", "FART", "BODY",
                 "MOOSE", "OTTER", "TURTLE", "PEE", "GOLF", "BEER"];
@@ -60,6 +62,8 @@ function speak(){
   let speakThis = `${line1.innerHTML} ${line2.innerHTML}`;
   var trash = new SpeechSynthesisUtterance(speakThis);
   trash.volume = 0.5;
+  voices = synth.getVoices();
+  trash.voice = voices[Math.floor(Math.random() * voices.length)];
   synth.speak(trash);
 };
 
@@ -70,21 +74,23 @@ function speak(){
 var centerBox = document.getElementById('centerBox');
 var WIDTH = centerBox.clientHeight;
 var HEIGHT = centerBox.clientHeight;
-var tremolo = new Tone.PingPongDelay().toMaster();
-const theramin = new Tone.MonoSynth().connect(tremolo);
+
+
 
 function playTheramin() {
   var x = event.clientX;
   var y = event.clientY;
-  theramin.volume.value = -38;
+  theramin.volume.value = -35;
+  delay.wet = 0.2;
   theramin.triggerAttack(y, "8n");
 };
 
 function stopTheramin() {
-  if (musicOpen == false){
-  theramin.triggerAttackRelease("C1", "16n");
-  }
-};
+    if (musicOpen === false){
+      var y = event.clientY;
+      theramin.triggerAttackRelease(y-200, "16n");
+    }
+  };
 
 //buzzing synth
 
@@ -92,8 +98,10 @@ function pound(){
 
 const synth = new Tone.MembraneSynth().toMaster();
 // play a note with the synth we setup
-synth.volume.value = -9;
-synth.triggerAttackRelease("C2", "8n");
+var x = event.clientX;
+var y = event.clientY;
+synth.volume.value = -20;
+synth.triggerAttackRelease(y/2, "16n");
 };
 
 
