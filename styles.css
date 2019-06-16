@@ -226,14 +226,17 @@ body {
 
 @media screen and (max-width: 420px) {
   body {
-    font-size: 50px;
+    font-size: 75px;
   }
   #centerBox {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .sidebar {
     width: 30px;
+    display: none;
   }
   #left {
     margin-right: 30px;
@@ -245,16 +248,16 @@ body {
 
   #buttonbox {
     margin-top: 20px;
-    width: 200px;
-    padding-left: 15px;
+    width: 300px;
+    padding-left: 30px;
   }
   .container {
     width: 360px;
     margin-top: 80px;
   }
   #musicplayer {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
 
   #line1 {
@@ -262,5 +265,8 @@ body {
   }
   #line2{
     margin-top: -50px;
+  }
+  .flash {
+    box-shadow: none;
   }
 }
