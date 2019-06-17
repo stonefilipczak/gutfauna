@@ -1,26 +1,26 @@
 
-var line1 = document.getElementById('line1');
-var line2 = document.getElementById('line2');
-var rightSide = document.getElementById('right');
-var leftSide = document.getElementById('left');
-var mobilebar = document.getElementById('mobilebar');
-var musicOpen = false;
-var delay = new Tone.PingPongDelay().toMaster();
+let line1 = document.getElementById('line1');
+let line2 = document.getElementById('line2');
+let rightSide = document.getElementById('right');
+let leftSide = document.getElementById('left');
+let mobilebar = document.getElementById('mobilebar');
+let musicOpen = false;
+const delay = new Tone.PingPongDelay().toMaster();
 const theramin = new Tone.MonoSynth().connect(delay);
-var centerBox = document.getElementById('centerBox');
+const centerBox = document.getElementById('centerBox');
 
 centerBox.addEventListener("touchmove", populate);
 
-var topWords = ['ACID', "OFFICE", "DISCO", "420", "FART", "BODY",
+const topWords = ['ACID', "OFFICE", "DISCO", "420", "FART", "BODY",
                 "MOOSE", "OTTER", "TURTLE", "PEE", "GOLF", "BEER"];
 
-var bottomWords = ["INC.", "ISLAND", "SUPPLY", "BAG", "HOLE", "MEAT",
+const bottomWords = ["INC.", "ISLAND", "SUPPLY", "BAG", "HOLE", "MEAT",
                     "LODGE", "BROS.", "MAN", "WAR", "PALS", ".COM"];
 
-var grams = ["&#9776;", "&#9777;", "&#9778;", "&#9779;", "&#9780;", "&#9781;",
+const grams = ["&#9776;", "&#9777;", "&#9778;", "&#9779;", "&#9780;", "&#9781;",
               "&#9782;", "&#9783;", 2, 3, 4, 5, 6, 7, 8];
 
-var mobilegrams = ["&#9776;", "&#9777;", "&#9778;", "&#9779;", "&#9780;", "&#9781;",
+const mobilegrams = ["&#9776;", "&#9777;", "&#9778;", "&#9779;", "&#9780;", "&#9781;",
             "&#9782;", "&#9783;"];
 
 
@@ -45,7 +45,7 @@ function populate(event) {
   leftSide.innerHTML = `${grams[Math.floor(Math.random() * grams.length)]}
                           ${grams[Math.floor(Math.random() * grams.length)]}
                           ${grams[Math.floor(Math.random() * grams.length)]}`;
-  mobilebar.innerHTML = `${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}`;                     
+  mobilebar.innerHTML = `${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}`;
   setTimeout(speak, 1000);
   playTheramin();
   flash();
@@ -60,17 +60,17 @@ function flash() {
 }
 //Speech Synthesis
 
-var synth = window.speechSynthesis;
+let synth = window.speechSynthesis;
 
 function speak(){
-  var synth = window.speechSynthesis;
   if (synth.speaking) {
+      console.log('speaking');
       return;
   }
   let speakThis = `${line1.innerHTML} ${line2.innerHTML}`;
-  var trash = new SpeechSynthesisUtterance(speakThis);
+  let trash = new SpeechSynthesisUtterance(speakThis);
   trash.volume = 0.5;
-  voices = synth.getVoices();
+  const voices = synth.getVoices();
   trash.voice = voices[Math.floor(Math.random() * voices.length)];
   synth.speak(trash);
 };
