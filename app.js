@@ -3,9 +3,13 @@ var line1 = document.getElementById('line1');
 var line2 = document.getElementById('line2');
 var rightSide = document.getElementById('right');
 var leftSide = document.getElementById('left');
+var mobilebar = document.getElementById('mobilebar');
 var musicOpen = false;
 var delay = new Tone.PingPongDelay().toMaster();
 const theramin = new Tone.MonoSynth().connect(delay);
+var centerBox = document.getElementById('centerBox');
+
+centerBox.addEventListener("touchmove", populate);
 
 var topWords = ['ACID', "OFFICE", "DISCO", "420", "FART", "BODY",
                 "MOOSE", "OTTER", "TURTLE", "PEE", "GOLF", "BEER"];
@@ -15,6 +19,9 @@ var bottomWords = ["INC.", "ISLAND", "SUPPLY", "BAG", "HOLE", "MEAT",
 
 var grams = ["&#9776;", "&#9777;", "&#9778;", "&#9779;", "&#9780;", "&#9781;",
               "&#9782;", "&#9783;", 2, 3, 4, 5, 6, 7, 8];
+
+var mobilegrams = ["&#9776;", "&#9777;", "&#9778;", "&#9779;", "&#9780;", "&#9781;",
+            "&#9782;", "&#9783;"];
 
 
 
@@ -38,6 +45,7 @@ function populate(event) {
   leftSide.innerHTML = `${grams[Math.floor(Math.random() * grams.length)]}
                           ${grams[Math.floor(Math.random() * grams.length)]}
                           ${grams[Math.floor(Math.random() * grams.length)]}`;
+  mobilebar.innerHTML = `${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}`;                     
   setTimeout(speak, 1000);
   playTheramin();
   flash();
@@ -71,7 +79,7 @@ function speak(){
 // theramin
 
 
-var centerBox = document.getElementById('centerBox');
+
 var WIDTH = centerBox.clientHeight;
 var HEIGHT = centerBox.clientHeight;
 

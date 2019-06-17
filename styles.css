@@ -25,6 +25,9 @@ body {
   text-shadow: 5px 5px red;
 }
 
+#mobilebar {
+  display: none;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -227,6 +230,8 @@ body {
 @media screen and (max-width: 420px) {
   body {
     font-size: 75px;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
   #centerBox {
     height: 300px;
@@ -253,7 +258,7 @@ body {
   }
   .container {
     width: 360px;
-    margin-top: 80px;
+    margin-top: 50px;
   }
   #musicplayer {
     width: 300px;
@@ -267,6 +272,12 @@ body {
     margin-top: -50px;
   }
   .flash {
-    box-shadow: none;
+    box-shadow: 3px 3px white;
+  }
+  #mobilebar {
+    display: none;
+    width: 100px;
+    margin-top: 20px;
+    justify: center;
   }
 }
