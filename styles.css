@@ -232,6 +232,7 @@ body {
     font-size: 75px;
     overflow-y: hidden;
     overflow-x: hidden;
+    position: fixed;
   }
   #centerBox {
     height: 300px;
