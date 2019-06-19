@@ -60,7 +60,7 @@ function populate(event) {
   mobilebar.innerHTML = `${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}${mobilegrams[Math.floor(Math.random() * mobilegrams.length)]}`;
   if (phone === false){
     setTimeout(speak, 1000);
-    playTheramin();
+    //playTheramin();
     pound();
   };
   flash();
@@ -100,24 +100,24 @@ var HEIGHT = centerBox.clientHeight;
 
 
 
-function playTheramin() {
-  if (phone === true){
-    return;
-  } else {
-  var x = event.clientX;
-  var y = event.clientY;
-  theramin.volume.value = -35;
-  delay.wet = 0.2;
-  theramin.triggerAttack(y, "8n");
-}
-};
-
-function stopTheramin() {
-    if (musicOpen === false && phone === false){
-      var y = event.clientY;
-      theramin.triggerAttackRelease(y-200, "16n");
-    }
-  };
+// function playTheramin() {
+//   if (phone === true){
+//     return;
+//   } else {
+//   var x = event.clientX;
+//   var y = event.clientY;
+//   theramin.volume.value = -35;
+//   delay.wet = 0.2;
+//   theramin.triggerAttack(y, "8n");
+// }
+// };
+//
+// function stopTheramin() {
+//     if (musicOpen === false && phone === false){
+//       var y = event.clientY;
+//       theramin.triggerAttackRelease(y-200, "16n");
+//     }
+//   };
 
 //buzzing synth
 
